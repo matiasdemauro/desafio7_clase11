@@ -1,12 +1,7 @@
-//console.log('Lógica');
-/*
-nombre_vendedor = prompt('Plantilla STOCK para vendedores.' + "\n"  + 'Ingrese nombre.')
-ingreso = new Date()
-alert('Vendedor:' + '  ' + nombre_vendedor + "\n" + 'Fecha de ingreso:' +' ' + ingreso.toLocaleString())
-*/
+
 const tituloo = document.getElementById('title');
 tituloo.innerHTML = `
-<h1 class='d-flex justify-content-center'>STOCK DE PRODUCTOS</h1>
+<h1 class='d-flex justify-content-center'>PRODUCTOS</h1>
 `
 
 
@@ -85,18 +80,18 @@ function agregar_a_carrito(e){
     let arreglo_JSON = JSON.stringify(carrito);
     localStorage.setItem('carrito' , arreglo_JSON);
     console.log(carrito);
-    /*mostrar_carrito(producto_carrito){
-        
-    }
-    */
-    //tengo que renterizar el objeto creado como producto_carrito
-    mostrar_carrito(producto_carrito)
+    
+    mostrar_carrito(producto_carrito);
+
+    
+    
+    
 }
 function mostrar_carrito(producto_carrito){
     //creo una fila
     let fila = document.createElement('tr');
     fila.innerHTML = ` 
-    <td><img src='${producto_carrito.img}'</td> 
+    <td><img src='${producto_carrito.img}' class='img'</td> 
     <td>${producto_carrito.nombre}</td>
     <td> ${producto_carrito.cantidad} </td>
     <td> ${producto_carrito.precio}</td>
